@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Based | Recommender</title>
+</head>
+<body>
+    <div>
+        <h1>Recommended Me Now:</h1>
+        <hr>
+        <form action="/predict" method="GET">
+            <input type="text" name="query" id="" value="">
+            <input type="submit">
+        </form>
+    </div>
+    <div>
+        {% if request.methods == 'GET' %}
+            <center>
+                    <h1>On Your Search Your New Recommend</h1>
+                    <hr>
+                    {{ data.tables |safe }}
+                </center>
+        {% else %}
+            <center>
+                <h1>Previous Searched Recommendations:</h1>
+                {{ data.tables |safe }}
+            </center>
+        {% endif %}
+    </div>
+</body>
+</html>

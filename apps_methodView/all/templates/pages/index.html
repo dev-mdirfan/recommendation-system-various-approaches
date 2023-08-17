@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script type="text/javascript">
+  var suggestions = {{ context.suggestions| tojson}};
+</script>
+
+<section class="intro">
+  <!-- https://mdbootstrap.com/img/Photos/new-templates/search-box/img5.jpg -->
+  <div class="bg-image h-100"
+    style="background-image: url({{ url_for('static', filename='img/' + 'bg-search.jpg') }});">
+    <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0,0,0, 0.5);">
+      <div class="container">
+        <p class="h2 mb-4 text-white">Search Your Desired Products</p>
+        <div class="card">
+          <div class="card-body p-4">
+            <div class="row">
+              <div class="col-12 mb-4">
+                <div class="input-group">
+                  <div class="form-outline flex-fill result-box" style="color: black;">
+                    <form action="/search_result" method="GET">
+                      <input type="search" id="autoComplete" name="query" autocomplete="off"
+                        class="form-control form-control-lg"
+                        style="background-color: #c0cdde; top: 0; position: sticky;" required="required"
+                        placeholder="Enter Your Text Here" />
+                      <!-- <label class="" style="position: absolute; top: 10px; left: 15px; z-index: 2; color:rgba(0, 0,0,0.55)" for="form1">Enter Your Text Here</label>   -->
+                    </form>
+                    <div class="form-helper pt-2"><span class="font-weight-bold">Suggested:</span>
+                      <a href="javascript:;"
+                        onclick="this.href='Page2.html?query=' + document.getElementById('form1').value">Send</a>
+                      <a href="#!" class="text-black-50">spring,</a>
+                      <a href="#!" class="text-black-50">natural,</a>
+                      <a href="#!" class="text-black-50">outdoors,</a>
+                      <a href="#!" class="text-black-50">forest,</a>
+                      <a href="#!" class="text-black-50">cactus,</a>
+                      <a href="#!" class="text-black-50">flowers,</a>
+                      <a href="#!" class="text-black-50">more</a>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary movie-button">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="card card-body p-4 bg-light mt-5">
+      <!-- Tabs navs -->
+      <ul class="nav nav-tabs mb-3" id="ex-with-icons" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active text-success" id="tab-1" data-mdb-toggle="tab" href="#tabs-1" role="tab"
+            aria-controls="ex-with-icons-tabs-1" aria-selected="true"><i class="fas fa-chart-pie fa-fw me-2"></i>Content
+            Based Recommendations</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link text-info" id="tab-2" data-mdb-toggle="tab" href="#tabs-2" role="tab"
+            aria-controls="ex-with-icons-tabs-2" aria-selected="false"><i class="fas fa-chart-line fa-fw me-2"></i>Model
+            Based Recommendation</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link text-danger" id="tab-3" data-mdb-toggle="tab" href="#tabs-3" role="tab"
+            aria-controls="ex-with-icons-tabs-3" aria-selected="false"><i
+              class="fas fa-cogs fa-fw me-2"></i>Collaborative Based Filtering</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link text-warning" id="tab-4" data-mdb-toggle="tab" href="#tabs-4" role="tab"
+            aria-controls="ex-with-icons-tabs-4" aria-selected="false"><i class="fas fa-cogs fa-fw me-2"></i>Search
+            Feature with Pandas</a>
+        </li>
+      </ul>
+      <!-- Tabs navs -->
+
+      <!-- Tabs content -->
+      <div class="tab-content" id="ex-with-icons-content">
+        <div class="tab-pane fade show active text-success" id="tabs-1" role="tabpanel"
+          aria-labelledby="ex-with-icons-tab-1">
+          <h5 class="card-title">Content Based Recommendations :-</h5>
+          <p class="card-text">
+            It is based on the information on the contents of the item rather than on the user opinions.The main idea is
+            if the user likes an item then he or she will like the "other" similar item.
+          </p>
+        </div>
+        <div class="tab-pane fade text-info" id="tabs-2" role="tabpanel" aria-labelledby="ex-with-icons-tab-2">
+          Tab 2 content
+        </div>
+        <div class="tab-pane fade text-danger" id="tabs-3" role="tabpanel" aria-labelledby="ex-with-icons-tab-3">
+          <h5 class="card-title">Collaberative Filtering:-</h5>
+          <p>
+            It is based on assumption that people like things similar to other things they like, and things that are
+            liked by other people with similar taste. it is mainly of two types:
+            <li>
+              User-User
+            </li>
+            <li>
+              Item -Item
+            </li>
+          </p>
+        </div>
+        <div class="tab-pane fade text-warning" id="tabs-4" role="tabpanel" aria-labelledby="ex-with-icons-tab-4">
+          Tab 4 content
+        </div>
+      </div>
+      <!-- Tabs content -->
+    </div>
+  </div>
+</section>
+
+<section>
+  <div style="height: 1000px;">
+
+  </div>
+</section>
+
+{% endblock content %}

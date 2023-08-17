@@ -1,0 +1,42 @@
+html,
+body,
+.intro {
+  height: 50vh;
+}
+
+body {
+  background-color: #222a34;
+  color: #fff;
+}
+/* li {
+  text-decoration: none;
+
+} */
+
+ul{
+  border-top: 1px solid #999;
+  padding: 15px 10px;
+}
+ ul li{
+  list-style: none;
+  border-radius: 3px;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+ ul li:hover{
+  background: #e9f3ff;
+}
+
+.result-box{
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.prakhar {
+  background-color: #c0cdde !important;
+  top: 0 !important;
+  position: sticky !important;
+  
+  ::placeholder{
+    color:black !important;
+  }
+}   

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar | Autocompletion</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="search-box">
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Search Anything" autocomplete="off">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="result-box">
+            <!-- This will be suggested search terms -->
+            <!-- <ul>
+                <li>JavaScript</li>
+                <li>Web Development</li>
+            </ul> -->
+        </div>
+    </div>
+    <script src="autocomplete.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
