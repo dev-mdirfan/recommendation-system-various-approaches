@@ -1,0 +1,141 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'poppins' ,sans-serif
+    
+}
+.container
+{
+    display:flex;
+}
+.sidebar
+{
+    position: fixed;
+    background-color: #ddd;
+    height: 100vh;
+    width: 25%;
+    padding: 50px 0;
+    /* border-right: 1px solid #eee;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.25); */
+}
+.filter>h2
+{
+    color: orangered;
+    margin-bottom: 20px;
+   padding-left: 45px;
+}
+.sidebar>h2
+{
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+   padding-left: 45px;
+}
+.filter
+{
+  margin-top: 50px;
+  padding: 30px 40px;
+}
+.content
+{
+    position: absolute;
+    right: 0;
+   
+    width: 75%;
+}
+
+.header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    background-color: #eee;
+    color: #383838;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.header p
+{ font-weight: bold;
+font-size:30px;
+}
+.fil-p
+{
+    padding: 15px 15px;
+    margin:7px 0px;
+    background-color: #ffffff;
+    color:black;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+.fil-p:hover
+{
+    background-color: #aaa;
+    color: orangered;
+}
+
+#root{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 33% 34% 33% ;
+	grid-gap: 20px;
+	padding: 30px;
+}
+.box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid #ddd;
+	padding: 15px;
+}
+.box>h3{
+	margin-bottom: 20px;
+}
+.img-box{
+	width: 100%;
+	height: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    /* background-color: red; */
+}
+.images{
+	max-height: 90%;
+	max-width: 90%;
+	object-fit: cover;
+	object-position: center;
+}
+.bottom{
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 70px;
+}
+h2{
+	font-size: 20px;
+	color: red;
+}
+button
+{
+    background-color: #d6cccc;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+button:hover{
+	background-color: #a19d9d;
+    border: none;
+}
