@@ -8,35 +8,38 @@ body {
   background-color: #222a34;
   color: #fff;
 }
-/* li {
-  text-decoration: none;
 
-} */
+/* ///////////////////////////////////////////////////////////////////// */
 
-ul{
-  border-top: 1px solid #999;
+.result-box{
+  max-height: 500px;
+  overflow-y: scroll;
+  width: 300px;
+  background: #fff;
+  color: #222a34;
+  position: absolute;
+  z-index: 999;
+  margin-left: 890px;
+  
+}
+
+.result-box ul{
+  border-top: 1px solid #fff;
   padding: 15px 10px;
 }
- ul li{
+.result-box ul li{
   list-style: none;
   border-radius: 3px;
   padding: 15px 10px;
   cursor: pointer;
 }
- ul li:hover{
-  background: #e9f3ff;
+.result-box ul li:hover{
+  background: #c4c6c8;
 }
 
-.result-box{
-  max-height: 300px;
-  overflow-y: scroll;
+/* On hover background color c4c6c8 for full length of result-box ul li  */
+
+.result-box ul li:hover{
+  background-size: auto;
 }
-.prakhar {
-  background-color: #c0cdde !important;
-  top: 0 !important;
-  position: sticky !important;
-  
-  ::placeholder{
-    color:black !important;
-  }
-}   
+
