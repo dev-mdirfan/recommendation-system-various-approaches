@@ -59,6 +59,8 @@ It's important to note that while you don't need to implement a full web applica
 5. **Evaluation:** I used **RMSE** to evaluate the models. This can be improved by using **Precision** and **Recall** to evaluate the models.
 
 ## References
+- Youtube
+- Kaggle
 
 
 
