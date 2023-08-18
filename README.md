@@ -56,7 +56,7 @@ It's important to note that while you don't need to implement a full web applica
 2. **Content Based Filtering:** I used TF-IDF to find the most similar products. This can be improved by using **Word2Vec** or **Doc2Vec** to find the most similar products.
 3. **Collaborative Filtering:** I used **Surprise** library to implement collaborative filtering. This can be improved by using **TensorFlow** or **PyTorch** to implement collaborative filtering.
 4. **Hybrid Filtering:** I used **Surprise** library to implement hybrid filtering. This can be improved by using **TensorFlow** or **PyTorch** to implement collaborative filtering.
-5. **Evaluation:** I used **RMSE** to evaluate the models. This can be improved by using **Precision** and **Recall** to evaluate the models.
+5. **Evaluation:** I used **RMSE** to evaluate the models. This can be improved by using **Precision** and **Recall** to evaluate a model.
 
 ## References
 
