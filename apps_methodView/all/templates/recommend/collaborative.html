@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<script type="text/javascript" src="{{url_for('static', filename='js/collaborative.js')}}"></script>
+<div class="h-25">
+</div>
+
+<section>
+  <div class="container">
+    <h1 class="text-warning"><u>Collaborative Filtering:</u></h1>
+    <div class="card">
+      <div class="card-body">
+        <form action="/collaborative" method="GET" class="input-group">
+          <input type="search" id="collaborative-autocomplete" class="form-control rounded" placeholder="Type Product Name"
+            aria-label="Search" aria-describedby="search-addon" name="collaborativeQuery" />
+          <button class="btn btn-outline-primary">search</button>
+        </form>
+      </div>
+    </div>
+    <div class="collaborative-result">
+    </div>
+  </div>
+</section>
+
+<section>
+    <div class="container mt-5">
+      <table class="table table-hover table-warning">
+        <thead>
+          <tr>
+            <th scope="col">Index</th>
+            <th scope="col">Product ID</th>
+            <th scope="col">User ID</th>
+            <th scope="col">Product Ratings</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% set ans = context.data %}
+          {% for i in range(0, ans|length) %}
+          <tr>
+            <th scope="row">{{ i }}</th>
+            <td>{{ ans[i][0] }}</td>
+            <td>{{ ans[i][1] }}</td>
+            <td>{{ ans[i][2] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+</section>
+{% endblock content %}

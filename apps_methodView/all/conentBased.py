@@ -108,7 +108,7 @@ class Recommend:
         product_indices = [i[0] for i in sim_scores]
         self.data = self.titles.iloc[product_indices]
         df = pd.DataFrame(self.data, columns=['product_name'])  
-        df.to_csv("./static/data/recommendData2.csv", index=False)
+        df.to_csv("./static/data/recommendData_content.csv", index=False)
 
     def get_recommendations(self, title):
         """
@@ -125,7 +125,7 @@ class Recommend:
         self.Cleaning()
         self.cosine_sim = self.CosineSimilarity()
         self.recommendations_30(title)
-        results = pd.read_csv("./static/data/recommendData2.csv")
+        results = pd.read_csv("./static/data/recommendData_content.csv")
         tables =  results.to_html(classes="product_name", header="true")
         data1 = self.data
         data2 = self.original_data
@@ -141,6 +141,5 @@ class Recommend:
         Returns:
             df (DataFrame): DataFrame of recommended product names.
         """
-        suggestData = pd.read_csv("./static/data/flipkart_com-ecommerce_sample.csv", na_values=["No rating available"])
-        suggestData = suggestData.drop_duplicates(subset ="product_name", keep = "first", inplace = False)
+        suggestData = pd.read_csv("./static/data/autocomplete_content.csv")
         return list(suggestData['product_name'])

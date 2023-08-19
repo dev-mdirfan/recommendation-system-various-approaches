@@ -18,6 +18,7 @@
     <script type="text/javascript">
         var suggestions = {{ context.suggestSearch | tojson }};
         var productNames = {{ context.suggestContent | tojson }};
+        var productIds = {{ context.suggestCollaborative | tojson }};
     </script>
 </head>
 

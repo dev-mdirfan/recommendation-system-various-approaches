@@ -6,6 +6,7 @@ try:
     from flask import Flask, render_template, request, jsonify, redirect, url_for
     from autocomplete import SearchBar
     from conentBased import Recommend
+    from collaborative import Collaborative
 except Exception as e:
     print("Some Modules are Missing {}".format(e))
     print("Please install the required modules")
@@ -16,8 +17,8 @@ templates = [
     "pages/index.html",
     "pages/search_results.html",
     "recommend/contentBased.html",
-    "recommend/collaborativeFiltering.html",
-    "recommend/hybridModels.html",
+    "recommend/collaborative.html",
+    "recommend/hybrid.html",
 ]
 
 @app.route("/")
@@ -58,22 +59,31 @@ def contentBased():
     return render_template(templates[2], context = context)
 
 # app route for collaborative filtering system page
-@app.route('/collaborativeFiltering', methods=['GET', 'POST'])
-def collaborativeFiltering():
-    if request.method == 'GET':
-        return render_template(templates[2])
-    return redirect(url_for(templates[0]))
+@app.route('/collaborative', methods=['GET', 'POST'])
+def collaborative():
+    collaborativeQuery = request.args.get('collaborativeQuery')
+    context['collaborativeQuery'] = collaborativeQuery
+    if request.args.get('collaborativeQuery') :
+        data, tables = obj3.get_recommendations(collaborativeQuery)
+        context['tables'] = tables
+        context['data'] = data
+        return render_template(templates[3], context = context)
+    return render_template(templates[3], context = context)
 
 
 if __name__ == "__main__":
     obj1 = SearchBar()
-    obj2 = Recommend()
     suggestSearch = obj1.get_suggestions()
     # print(suggestSearch[:5])
+    obj2 = Recommend()
     suggestContent = obj2.get_product_name()
     # print(suggestContent[:5])
+    obj3 = Collaborative()
+    suggestCollaborative = obj3.get_product_id()
+    # print(suggestCollaborative[:5])
     context = {
         "suggestSearch": suggestSearch,
         "suggestContent": suggestContent,
+        "suggestCollaborative": suggestCollaborative,
     }
     app.run(debug=True)

@@ -5,7 +5,23 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ">
                 <a class="nav-link link-light active" aria-current="page" href="{{ url_for('index') }}">Home</a>
-                <a class="nav-link link-secondary" href="#">Recommendations</a>
+                <div class="dropdown">
+                    <a
+                    class="nav-link link-secondary dropdown-toggle"
+                    href="#"
+                    role="button"
+                    id="dropdownMenuLink"
+                    data-mdb-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Recommendations
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
                 <a class="nav-link link-secondary" href="#">About Us</a>
             </div>
         </div>
@@ -18,13 +34,14 @@
         </div>
         <div class="d-flex align-items-center px-2">
             <a class="btn text-white" style="background-color: #0082ca;"
-                href="https://github.com/dev-mdirfan/recommendation-system-various-approaches" target="_blank" role="button">
-                <i class="fab fa-github fa-xl"></i> GiHub Code
+                href="https://github.com/dev-mdirfan/recommendation-system-various-approaches" target="_blank"
+                role="button">
+                <i class="fab fa-github fa-lg"></i> GiHub Code
             </a>
         </div>
-            <div class="result-box">
-                <!-- Our Search Results -->
-            </div>
+        <div class="result-box">
+            <!-- Our Search Results -->
+        </div>
     </div>
 </nav>
 <!-- Navbar End -->
