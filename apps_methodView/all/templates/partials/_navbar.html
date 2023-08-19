@@ -1,30 +1,30 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #1B2430;">
     <div class="container px-xxl-2">
-        <a class="navbar-brand mb-0 h1 text-light" href="#">Flipkart</a>
+        <a class="navbar-brand mb-0 h1 text-light" href="{{ url_for('index') }}">Flipkart</a>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ">
-                <a class="nav-link link-light active" aria-current="page" href="#">Home</a>
+                <a class="nav-link link-light active" aria-current="page" href="{{ url_for('index') }}">Home</a>
                 <a class="nav-link link-secondary" href="#">Recommendations</a>
                 <a class="nav-link link-secondary" href="#">About Us</a>
             </div>
         </div>
         <div class="px-4">
-            <form action="/" method="GET" class="d-flex input-group w-auto">
+            <form action="/search_result" method="GET" class="d-flex input-group w-auto">
                 <input type="search" class="form-control rounded form-outline form-white border-0" id="input-box"
-                    placeholder="Type query" aria-label="Search" aria-describedby="search-addon" name="query"
-                    value="" />
+                    placeholder="Type query" aria-label="Search" aria-describedby="search-addon" name="query" />
                 <button class="btn bg-success text-light" data-mdb-ripple-color="dark">Search</button>
             </form>
         </div>
         <div class="d-flex align-items-center px-2">
-            <a class="btn text-white" style="background-color: #0082ca;" href="https://github.com/mdbootstrap/mdb-ui-kit" role="button">
-                <i class="fab fa-github fa-lg"></i> GiHub Code
+            <a class="btn text-white" style="background-color: #0082ca;"
+                href="https://github.com/dev-mdirfan/recommendation-system-various-approaches" target="_blank" role="button">
+                <i class="fab fa-github fa-xl"></i> GiHub Code
             </a>
+        </div>
+            <div class="result-box">
+                <!-- Our Search Results -->
+            </div>
     </div>
-</div>
 </nav>
-<div class="result-box dropdown-item">
-
-</div>
 <!-- Navbar End -->

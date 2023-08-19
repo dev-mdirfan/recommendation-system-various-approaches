@@ -13,14 +13,15 @@ body {
 
 .result-box{
   max-height: 500px;
+  margin-left: 828px;
+  margin-top: 535px;
   overflow-y: scroll;
   width: 300px;
   background: #fff;
   color: #222a34;
   position: absolute;
+  border-radius: 3px 3px 3px 3px;
   z-index: 999;
-  margin-left: 890px;
-  
 }
 
 .result-box ul{
@@ -37,9 +38,37 @@ body {
   background: #c4c6c8;
 }
 
+
 /* On hover background color c4c6c8 for full length of result-box ul li  */
 
-.result-box ul li:hover{
+/* .result-box ul li:hover{
   background-size: auto;
+}  */
+
+.content-result{
+  width: 1200px;
+  background: #fff;
+  /* margin:  auto 0; */
+  border-radius: 5px;
+  color: #222a34;
+  position: absolute;
+  max-height: 300px;
+  overflow-y: scroll;
 }
+
+.content-result ul{
+  border-top: 1px solid #999;
+  padding: 15px 10px;
+}
+.content-result ul li{
+  list-style: none;
+  border-radius: 3px;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+.content-result ul li:hover{
+  background: #e9f3ff;
+}
+
+
 

@@ -1,18 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<script type="text/javascript">
-  var suggestions = {{ context.suggestions| tojson}};
-</script>
-<div class="bg-image h-25">
-</div>
-<div class="mx-xl-5">
-  <h1 class="text-white"><u>Recommendations:</u></h3>
-</div>
-
-<section>
+  <div class="h-25">
+  </div>
+  
+  <section>
+  <h1 class="text-white mx-5"><u>Recommendations:</u></h3>
   <div class="container">
-    <div class="card card-body p-4 bg-light mt-5">
+    <div class="card card-body p-4 bg-light mt-3">
       <!-- Tabs navs -->
       <ul class="nav nav-tabs mb-3" id="ex-with-icons" role="tablist">
         <li class="nav-item" role="presentation">
@@ -23,7 +18,7 @@
         <li class="nav-item" role="presentation">
           <a class="nav-link text-warning" id="tab-2" data-mdb-toggle="tab" href="#tabs-2" role="tab"
             aria-controls="ex-with-icons-tabs-2" aria-selected="false"><i
-              class="fas fa-chart-line fa-fw me-2"></i>Collaborative Filtering</a>
+            class="fas fa-chart-line fa-fw me-2"></i>Collaborative Filtering</a>
         </li>
         <li class="nav-item" role="presentation">
           <a class="nav-link text-danger" id="tab-3" data-mdb-toggle="tab" href="#tabs-3" role="tab"
@@ -40,13 +35,10 @@
               aria-labelledby="ex-with-icons-tab-1">
               <h3 class="card-title mx-3"><u>Content Based RS:</u></h5>
                 <div class="note note-success mb-3 px-3 mx-3">
-                  <strong>Note success:</strong> It is based on the information on the contents of the item rather than
+                  <strong>Definition:</strong>Content Based are the systems that create a recommendation system by capturing similarity relationship between items according to comments, description or attributes of items which users interact. It is based on the information on the contents of the item rather than
                   on the user opinions.The main idea is if the user likes an item then he or she will like the "other" similar item.
                 </div>
                 <div class="px-3">
-                  <p class="card-text">
-                    Content Based are the systems that create a recommendation system by capturing similarity relationship between items according to comments, description or attributes of items which users interact.
-                  </p>
                   <h5 class="card-title">We have Implemented:</h5>
                   <ul class="list-unstyled">
                     <li class="mb-1"><i class="fas fa-check-circle me-2 text-success"></i>TF_IDF and Word2Vec in order to capture similarity</li>
@@ -58,47 +50,17 @@
                 <div class="card-body">
                   <dl class="row">
                     <dt class="col-sm-3">Dataset:</dt>
-                    <dd class="col-sm-9">Kaggle <a href="" target="_blank">Link</a></dd>
+                    <dd class="col-sm-9">Kaggle <a href="https://www.kaggle.com/datasets/PromptCloudHQ/flipkart-products?select=flipkart_com-ecommerce_sample.csv" target="_blank"><u>Link</u></a></dd>
                     <dt class="col-sm-3">Shape:</dt>
                     <dd class="col-sm-9">exp.aboutDataCB</dd>
                     <dt class="col-sm-3">Column Names:</dt>
                     <dd class="col-sm-9">
-                      <p></p>
-                    </dd>
-                    <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
-                    <dd class="col-sm-9">
-                      Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                    </dd>
-                    <dt class="col-sm-3">Nesting</dt>
-                    <dd class="col-sm-9">
-                      <dl class="row">
-                        <dt class="col-sm-4">Nested definition list</dt>
-                        <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
-                      </dl>
+                      {{ context.columnNamesCB }}
                     </dd>
                   </dl>
                 </div>
                 <div class="px-3">
-                  <p class="card-text">
-                    <strong>Method 1:</strong>
-                    <br>
-                    We can use the cosine distance between the vectors of the item and the user to determine its
-                    preference to the user. For explaining this, let us consider an example:
-                    We observe that the vector for a user will have a positive number for actors that tend to appear in
-                    movies the user likes and negative numbers for actors user doesn't like, Consider a movie with
-                    actors which user likes and only a few actors which user doesn't like, then the cosine angle between
-                    the user's and movie's vectors will be a large positive fraction. Thus, the angle will be close to
-                    0, therefore a small cosine distance between the vectors.
-                    It represents that the user tends to like the movie, if the cosine distance is large, then we tend
-                    to avoid the item from the recommendation.
-                    <br>
-                    <strong>Method 2:</strong>
-                    <br>
-                    We can use a classification approach in the recommendation systems too, like we can use the Decision
-                    Tree for finding out whether a user wants to watch a movie or not, like at each level we can apply a
-                    certain condition to refine our recommendation.
-                  </p>
-                  <button type="button" class="btn btn-success">GET NOW</button>
+                  <a href="{{url_for('contentBased')}}" class="btn btn-success">GET Recommend NOW</a>
                 </div>
 
             </div>
@@ -133,6 +95,7 @@
     </div>
   </div>
 </section>
+
 
 
 {% endblock content %}
