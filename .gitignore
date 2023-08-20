@@ -43,4 +43,11 @@ instance/
 # Jupyter Notebook
 *.ipynb_checkpoints
 
+# pycache
+*__pycache__/
+
+# csv file
+*/ratings_electronics.csv
+*.csv
+ratings_electronics.csv
 

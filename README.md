@@ -19,9 +19,11 @@ strengths and limitations of your solution.
 
 ## Dataset
 
+- For content based - [Kaggle](https://www.kaggle.com/datasets/PromptCloudHQ/flipkart-products?select=flipkart_com-ecommerce_sample.csv)
+- For collaborative - [Kaggle](https://www.kaggle.com/datasets/pritech/ratings-electronics?select=ratings_Electronics.csv)
 
 
-## Solution - ChatGPT Answer
+## Solution Approach
 
 The problem statement provided by Flipkart Grid 5.0 does not explicitly mention whether you need to implement both the frontend and backend of a web application. However, it does focus on developing an algorithm or model to create personalized product rankings for individual users. This implies that you should primarily focus on designing the algorithmic solution rather than building a complete web application. Here's how you could approach this problem:
 
@@ -59,8 +61,11 @@ It's important to note that while you don't need to implement a full web applica
 5. **Evaluation:** I used **RMSE** to evaluate the models. This can be improved by using **Precision** and **Recall** to evaluate the models.
 
 ## References
+
 - Youtube
 - Kaggle
+- Articles / Blogs
+- Stackoverflow
 
 
 
