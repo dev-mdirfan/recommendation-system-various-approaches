@@ -66,7 +66,7 @@ def collaborative():
     collaborativeQuery = request.args.get('collaborativeQuery')
     context['collaborativeQuery'] = collaborativeQuery
     if request.args.get('collaborativeQuery') :
-        data, tables = obj3.get_recommendations(collaborativeQuery)
+        data, tables = obj3.get_recommendations(str(collaborativeQuery))
         context['tables'] = tables
         context['data'] = data
         return render_template(templates[3], context = context)

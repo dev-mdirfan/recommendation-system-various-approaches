@@ -11,8 +11,9 @@
     <div class="card">
       <div class="card-body">
         <form action="/collaborative" method="GET" class="input-group">
-          <input type="search" id="collaborative-autocomplete" class="form-control rounded" placeholder="Type Product ID"
-            aria-label="Search" aria-describedby="search-addon" name="collaborativeQuery" required/>
+          <input type="search" id="collaborative-autocomplete" class="form-control rounded"
+            placeholder="Type Product ID" aria-label="Search" aria-describedby="search-addon" name="collaborativeQuery"
+            required />
           <button class="btn btn-outline-primary">search</button>
         </form>
       </div>
@@ -23,28 +24,37 @@
 </section>
 
 <section>
-    <div class="container mt-5">
-      <table class="table table-hover table-warning">
-        <thead>
-          <tr>
-            <th scope="col">Index</th>
-            <th scope="col">Product ID</th>
-            <th scope="col">User ID</th>
-            <th scope="col">Product Ratings</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% set ans = context.data %}
-          {% for i in range(0, ans|length) %}
-          <tr>
-            <th scope="row">{{ i + 1 }}</th>
-            <td>{{ ans[i][0] }}</td>
-            <td>{{ ans[i][1] }}</td>
-            <td>{{ ans[i][2] }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
+  <div class="container mt-5">
+    <h2><u>Top 25 Recommendations On Your Selected Product</u></h2>
+    {% if context.collaborativeQuery %}
+    <i class="fas fa-question-circle me-2 text-warning"></i>Search Results for <strong class="text-warning"><u>{{ context.collaborativeQuery }}</u></strong>
+    <hr>
+    {% else %}
+      <div>
+        <i class="fas fa-question-circle me-2 text-warning"></i>Search Results will be shown here
+      </div>
+    {% endif %}
+    <table class="table table-hover table-warning">
+      <thead>
+        <tr>
+          <th scope="col">Index</th>
+          <th scope="col">Product ID</th>
+          <th scope="col">User ID</th>
+          <th scope="col">Product Ratings</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% set ans = context.data %}
+        {% for i in range(0, ans|length) %}
+        <tr>
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ ans[i][0] }}</td>
+          <td>{{ ans[i][1] }}</td>
+          <td>{{ ans[i][2] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </section>
 {% endblock content %}
