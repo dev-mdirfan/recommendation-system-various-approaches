@@ -1,5 +1,5 @@
 '''
-The hybrid model is a combination of content-based and collaborative filtering models.
+    The hybrid model is a combination of content-based and collaborative filtering models.
 '''
 
 try:
