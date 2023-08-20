@@ -12,12 +12,13 @@
       <div class="card-body">
         <form action="/contentBased" method="GET" class="input-group">
           <input type="search" id="content-autocomplete" class="form-control rounded" placeholder="Type Product Name"
-            aria-label="Search" aria-describedby="search-addon" name="contentQuery" />
+            aria-label="Search" aria-describedby="search-addon" name="contentQuery" required/>
           <button class="btn btn-outline-primary">search</button>
         </form>
       </div>
     </div>
-    <div class="content-result">
+    <div class="content-result" style="position: absolute; z-index: 3;">
+      <!-- dropdown list  -->
     </div>
   </div>
 </section>
@@ -45,17 +46,17 @@
               {% if i == 0 %}
               <div class="carousel-item active">
                 <img src="{{ ans[i][2:-1] }}" class="d-block w-100 img-fluid rounded-start" alt="Wild Landscape"
-                  style="max-height: fit-content; object-fit: contain;" />
+                  style="object-fit: cover;" />
               </div>
               {% elif i == ans|length-1 %}
               <div class="carousel-item">
                 <img src="{{ ans[i][2:-2] }}" class="d-block w-100 img-fluid rounded-start" alt="Camera"
-                  style="max-height: fit-content; object-fit: contain;" />
+                  style="object-fit: cover;" />
               </div>
               {% else %}
               <div class="carousel-item">
                 <img src="{{ ans[i][2:-1] }}" class="d-block w-100 img-fluid rounded-start" alt="Exotic Fruits"
-                  style="max-height: fit-content; object-fit: contain;" />
+                  style="object-fit: cover;" />
               </div>
               {% endif %}
               {% endfor %}

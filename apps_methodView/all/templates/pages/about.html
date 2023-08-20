@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="h-25"></div>
+<section>
+    <div class="container">
+        <h2 class="h2 text-light"><u>About Us:</u></h2>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="h2 text-primary"><u>Team Name:</u> <span class="text-warning">Bit Masters</span></h2>
+            </div>
+            <div class="card-body">
+                <h3 class="h3 text-primary"><u>Team Members:</u>
+                    <span class="text-warning">Priyanshu Mishra,</span>
+                    <span class="text-warning">Mohd Irfan,</span>
+                    <span class="text-warning">Prakhar Srivastava</span>
+                </h3>
+                <hr>
+                <!-- Problem and Aim -->
+                <p>
+                    <h3 class="h3 text-primary"><u>Problem Statement:</u></h3>
+                    <h4 class="h4 text-warning">To build a recommendation system for an e-commerce website to
+                        recommend products to the users based on their previous ratings and reviews.</h4>
+                </p>
+                <!-- What we have Implemented -->
+                <p>
+                    <h3 class="h3 text-primary"><u>Solution:</u></h3>
+                    <h4 class="h4 text-warning">We have implemented three types of recommendation systems:</h4>
+                    <ul class="list-unstyled text-success">
+                        <li class="mb-1"><i class="fas fa-check-circle me-2 text-success"></i>Content Based Model</li>
+                        <li class="mb-1"><i class="fas fa-check-circle me-2 text-success"></i>Collaborative Filtering</li>
+                        <li class="mb-1"><i class="fas fa-check-circle me-2 text-success"></i>Hybrid Filtering</li>
+                      </ul>
+                </p>
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

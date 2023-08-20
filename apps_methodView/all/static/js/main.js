@@ -24,10 +24,12 @@ inputBox.onkeyup = function() {
 
 
 function display(results){
-    const content = results.map((list) => {
-        return "<li onclick=selectInput(this)>" + list + "</li>";
-    });
-    resultsBox.innerHTML = '<ul >' + content.join('') + '</ul>';
+    if (results.length > 1) {
+        const content = results.map((list) => {
+            return "<li onclick=selectInput(this)>" + list + "</li>";
+        });
+        resultsBox.innerHTML = '<ul >' + content.join('') + '</ul>';
+    }
 }
 
 function selectInput(element){

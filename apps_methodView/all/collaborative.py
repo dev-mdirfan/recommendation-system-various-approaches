@@ -202,6 +202,10 @@ class Collaborative:
         # remove duplicate product id
         product_id = product_id.drop_duplicates()
         return list(product_id["productId"])
+    
+    def get_column_names(self):
+        col_list = ['User ID', 'Product ID', 'Rating', 'Timestamp']
+        return col_list
 
 
 # if __name__ == "__main__":

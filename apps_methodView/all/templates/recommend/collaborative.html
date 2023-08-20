@@ -11,8 +11,8 @@
     <div class="card">
       <div class="card-body">
         <form action="/collaborative" method="GET" class="input-group">
-          <input type="search" id="collaborative-autocomplete" class="form-control rounded" placeholder="Type Product Name"
-            aria-label="Search" aria-describedby="search-addon" name="collaborativeQuery" />
+          <input type="search" id="collaborative-autocomplete" class="form-control rounded" placeholder="Type Product ID"
+            aria-label="Search" aria-describedby="search-addon" name="collaborativeQuery" required/>
           <button class="btn btn-outline-primary">search</button>
         </form>
       </div>
@@ -37,7 +37,7 @@
           {% set ans = context.data %}
           {% for i in range(0, ans|length) %}
           <tr>
-            <th scope="row">{{ i }}</th>
+            <th scope="row">{{ i + 1 }}</th>
             <td>{{ ans[i][0] }}</td>
             <td>{{ ans[i][1] }}</td>
             <td>{{ ans[i][2] }}</td>

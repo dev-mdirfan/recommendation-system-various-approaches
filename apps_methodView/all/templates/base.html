@@ -19,6 +19,8 @@
         var suggestions = {{ context.suggestSearch | tojson }};
         var productNames = {{ context.suggestContent | tojson }};
         var productIds = {{ context.suggestCollaborative | tojson }};
+        var userIds = {{ context.suggestHybrid1 | tojson }};
+        var productIds2 = {{ context.suggestHybrid2 | tojson }};
     </script>
 </head>
 

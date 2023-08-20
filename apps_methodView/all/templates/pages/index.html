@@ -33,7 +33,7 @@
           <div class="tab-content" id="ex-with-icons-content">
             <div class="tab-pane fade show active text-success" id="tabs-1" role="tabpanel"
               aria-labelledby="ex-with-icons-tab-1">
-              <h3 class="card-title mx-3"><u>Content Based RS:</u></h5>
+              <h3 class="card-title mx-3"><u>Content Based Model:</u></h5>
                 <div class="note note-success mb-3 px-3 mx-3">
                   <strong>Definition:</strong>Content Based are the systems that create a recommendation system by capturing similarity relationship between items according to comments, description or attributes of items which users interact. It is based on the information on the contents of the item rather than
                   on the user opinions.The main idea is if the user likes an item then he or she will like the "other" similar item.
@@ -65,28 +65,64 @@
 
             </div>
             <div class="tab-pane fade text-warning" id="tabs-2" role="tabpanel" aria-labelledby="ex-with-icons-tab-2">
-              <h3 class="card-title"><u>Collaborative Filtering:</u> (Model Based)</h5>
-                <div class="px-3">
-                  <p class="card-text">
-                    Tab 2 content
-                  </p>
-                  <a href="{{url_for('collaborative')}}" class="btn btn-warning">Collaborative Recommend</a>
+              <h3 class="card-title"><u>Collaborative Filtering:</u></h5>
+                <div class="note note-warning mb-3 px-3 mx-3">
+                  <strong>Definition:</strong>Content Based are the systems that create a recommendation system by capturing similarity relationship between items according to comments, description or attributes of items which users interact. It is based on the information on the contents of the item rather than
+                  on the user opinions.The main idea is if the user likes an item then he or she will like the "other" similar item.
                 </div>
-
+                <div class="px-3">
+                  <h5 class="card-title">We have Implemented:</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-1"><i class="fas fa-check-circle me-2 text-warning"></i>Popularity (Content Based)</li>
+                    <li class="mb-1"><i class="fas fa-check-circle me-2 text-warning"></i>Collaborative Filtering</li>
+                    <li class="mb-1"><i class="fas fa-check-circle me-2 text-warning"></i>Collaborative Filtering (Model Based)</li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <dl class="row">
+                    <dt class="col-sm-3">Dataset:</dt>
+                    <dd class="col-sm-9">Kaggle <a href="https://www.kaggle.com/datasets/PromptCloudHQ/flipkart-products?select=flipkart_com-ecommerce_sample.csv" target="_blank"><u>Link</u></a></dd>
+                    <dt class="col-sm-3">Shape:</dt>
+                    <dd class="col-sm-9">exp.aboutDataCB</dd>
+                    <dt class="col-sm-3">Column Names:</dt>
+                    <dd class="col-sm-9">
+                      {{ context.columnNamesCF }}
+                    </dd>
+                  </dl>
+                </div>
+                <div class="px-3">
+                  <a href="{{url_for('collaborative')}}" class="btn btn-warning">GET Hybrid Recommendation</a>
+                </div>
             </div>
             <div class="tab-pane fade text-danger" id="tabs-3" role="tabpanel" aria-labelledby="ex-with-icons-tab-3">
-              <h5 class="card-title">Hybrid :-</h5>
-              <p>
-                It is based on assumption that people like things similar to other things they like, and things that are
-                liked by other people with similar taste. it is mainly of two types:
-                <li>
-                  User-User
-                </li>
-                <li>
-                  Item -Item
-                </li>
-              </p>
-              <button type="button" class="btn btn-danger">Danger</button>
+              <h3 class="card-title"><u>Hybrid Filtering:</u></h5>
+                <div class="note note-danger mb-3 px-3 mx-3">
+                  <strong>Definition:</strong>Content Based are the systems that create a recommendation system by capturing similarity relationship between items according to comments, description or attributes of items which users interact. It is based on the information on the contents of the item rather than
+                  on the user opinions.The main idea is if the user likes an item then he or she will like the "other" similar item.
+                </div>
+                <div class="px-3">
+                  <h5 class="card-title">We have Implemented:</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-1"><i class="fas fa-check-circle me-2 text-danger"></i>Popularity (Content Based)</li>
+                    <li class="mb-1"><i class="fas fa-check-circle me-2 text-danger"></i>Collaborative Filtering</li>
+                    <li class="mb-1"><i class="fas fa-check-circle me-2 text-danger"></i>Collaborative Filtering (Model Based)</li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <dl class="row">
+                    <dt class="col-sm-3">Dataset:</dt>
+                    <dd class="col-sm-9">Kaggle <a href="https://www.kaggle.com/datasets/PromptCloudHQ/flipkart-products?select=flipkart_com-ecommerce_sample.csv" target="_blank"><u>Link</u></a></dd>
+                    <dt class="col-sm-3">Shape:</dt>
+                    <dd class="col-sm-9">(70,000, )</dd>
+                    <dt class="col-sm-3">Column Names:</dt>
+                    <dd class="col-sm-9">
+                      {{ context.columnNamesCF }}
+                    </dd>
+                  </dl>
+                </div>
+                <div class="px-3">
+                  <a href="{{url_for('hybrid')}}" class="btn btn-danger">GET Hybrid Recommendation</a>
+                </div>
             </div>
           </div>
         </div>

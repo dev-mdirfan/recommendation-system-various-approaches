@@ -22,13 +22,13 @@
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                   </ul>
                 </div>
-                <a class="nav-link link-secondary" href="#">About Us</a>
+                <a class="nav-link link-secondary" href="{{ url_for('about') }}">About Us</a>
             </div>
         </div>
         <div class="px-4">
             <form action="/search_result" method="GET" class="d-flex input-group w-auto">
                 <input type="search" class="form-control rounded form-outline form-white border-0" id="input-box"
-                    placeholder="Type query" aria-label="Search" aria-describedby="search-addon" name="query" />
+                    placeholder="Type query" aria-label="Search" aria-describedby="search-addon" name="query" required/>
                 <button class="btn bg-success text-light" data-mdb-ripple-color="dark">Search</button>
             </form>
         </div>

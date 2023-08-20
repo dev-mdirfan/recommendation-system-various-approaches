@@ -95,3 +95,56 @@ body {
 .collaborative-result ul li:hover{
   background: #e9f3ff;
 }
+
+
+.hybrid1-result{
+  width: 540px;
+  background: #fff;
+  margin-right: 100px;
+  border-radius: 5px;
+  color: #222a34;
+  position: absolute;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.hybrid1-result ul{
+  border-top: 1px solid #999;
+  padding: 15px 10px;
+}
+.hybrid1-result ul li{
+  list-style: none;
+  border-radius: 3px;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+.hybrid1-result ul li:hover{
+  background: #e9f3ff;
+}
+
+/*  */
+
+.hybrid2-result{
+  width: 540px;
+  background: #fff;
+  margin: 0 660px 0;
+  border-radius: 5px;
+  color: #222a34;
+  position: absolute;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.hybrid2-result ul{
+  border-top: 1px solid #999;
+  padding: 15px 10px;
+}
+.hybrid2-result ul li{
+  list-style: none;
+  border-radius: 3px;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+.hybrid2-result ul li:hover{
+  background: #e9f3ff;
+}

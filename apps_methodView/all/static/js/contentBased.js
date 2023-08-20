@@ -23,12 +23,13 @@ window.onload = function(){
         }
     }
 
-
     function display(results){
-        const content = results.map((list) => {
-            return "<li onclick = selectContent(this)>" + list + "</li>";
-        });
-        contentResults.innerHTML = '<ul >' + content.join('') + '</ul>';
+        if (results.length > 1) {
+            const content = results.map((list) => {
+                return "<li onclick = selectContent(this)>" + list + "</li>";
+            });
+            contentResults.innerHTML = '<ul >' + content.join('') + '</ul>';
+        }
     }
 };
 

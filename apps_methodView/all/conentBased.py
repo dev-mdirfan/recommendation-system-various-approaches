@@ -143,3 +143,13 @@ class Recommend:
         """
         suggestData = pd.read_csv("./static/data/autocomplete_content.csv")
         return list(suggestData['product_name'])
+    
+    def get_column_names(self):
+        """
+        Get the column names of the original data.
+        
+        Returns:
+            col_list (list): List of column names.
+        """
+        col_list = ['uniq_id', 'crawl_timestamp', 'product_url', 'product_name', 'product_category_tree', 'pid', 'retail_price', 'discounted_price', 'image', 'is_FK_Advantage_product', 'description', 'brand', 'product_rating', 'overall_rating', 'product_specifications']
+        return col_list

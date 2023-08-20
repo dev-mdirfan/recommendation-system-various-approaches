@@ -48,7 +48,25 @@ exporting suggestion data to csv file for collaborative filtering
 # product_id.to_csv("./static/data/autocomplete_collaborative.csv", index=False)
 
 
+'''
+exporting suggestion data to csv file for hybrid filtering
+'''
 
+# data = pd.read_csv("./static/data/ratings_electronics.csv", names=['userId', 'productId','Rating','timestamp'])
+# # taking only user id
+# user_id = data['userId']
+# # remove duplicate user id
+# user_id = user_id.drop_duplicates()
+# #  to csv
+# user_id.to_csv("./static/data/autocomplete_hybrid.csv", index=False)
+
+# data = pd.read_csv("./static/data/ratings_electronics.csv", names=['userId', 'productId','Rating','timestamp'])
+# # taking only product id
+# product_id = data['productId']
+# # remove duplicate product id
+# product_id = product_id.drop_duplicates()
+# #  to csv
+# product_id.to_csv("./static/data/autocomplete_hybrid2.csv", index=False)
 
 
 
