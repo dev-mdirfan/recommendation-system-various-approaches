@@ -3,6 +3,33 @@
 I have created multiple recommendation systems using different techniques. The following are the techniques used:
 
 - Content Based Filtering
+- Collaborative Filtering
+- Hybrid Filtering
+
+## Setup
+
+1. Clone the repository
+2. Install the dependencies
+3. Run the following command to start the server
+
+```bash
+# Install the virtual environment
+python3 -m venv venv
+
+# Activate the virtual environment
+.\venv\Scripts\activate
+
+# Install the dependencies
+pip install -r requirements.txt
+
+# Run the server
+python app.py
+```
+
+## Preview of the Web Application
+
+[Preview](https://youtu.be/jZcMbm6Nm1E)
+
 
 
 ## Problem Statement: Personalized  Product  Recommendations
