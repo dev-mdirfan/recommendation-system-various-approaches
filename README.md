@@ -6,6 +6,11 @@ I have created multiple recommendation systems using different techniques. The f
 - Collaborative Filtering
 - Hybrid Filtering
 
+## Preview
+
+![preview](/demo-video.gif)
+
+
 ## Setup
 
 1. Clone the repository
@@ -26,7 +31,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## Preview of the Web Application
+## Video Preview of the Web Application
 
 [Preview](https://youtu.be/jZcMbm6Nm1E)
 
